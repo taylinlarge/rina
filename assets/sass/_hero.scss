@@ -1,0 +1,129 @@
+.video-header {
+	// display: flex;
+	height: 100%;
+	.video-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+
+		video {
+			height: 100vh;
+			width: auto;
+		}
+	}
+
+	.rina-title {
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+
+		h1 {
+			font-family: $title-font;
+			font-size: 2rem;
+			padding-top: 5px;
+			font-weight: bold;
+		}
+	}
+
+	.rina-title-top {
+		transform: translate(-50%, 0%);
+	}
+
+	.hero-description {
+		display: none;
+		width: 50%;
+		height: 100%;
+
+		@media screen and (max-width: 468px) {
+			width: 100%;	
+			align-items: flex-end;
+		}
+
+		.hero-description__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 35px;
+
+			@media screen and (max-width: 468px) {
+				margin-left: 0;
+				padding: 30px;
+			}
+
+
+			.hero-description__underline {
+				height: 5px;
+				width: 60px;
+				background-color: #DDD1B9;
+				margin: 20px 0;
+
+				@media screen and (max-width: 468px) {
+					display: none;
+				}
+			}
+
+			h1 {
+				font-size: 2em;
+				margin-bottom: 0;
+				font-family: $body-font;
+
+				@media screen and (max-width: 468px) {
+					margin-bottom: 20px;
+				}
+
+				.rina-bold {
+					font-weight: bold;
+					color: $font-color;
+				}
+
+				.rina-italic {
+					font-style: italic;
+					color: $font-color;
+				}
+			}
+			
+			p {
+				max-width: 600px;
+				margin-left: 10%;
+				font-family: $body-font;
+				color: $font-color;
+
+				@media screen and (max-width: 468px) {
+					margin: 0;
+				}
+			}
+
+			.hero-description__scroll {
+				display: flex;
+				position: relative;
+				bottom: -30%;
+				flex-direction: row;
+				align-items: center;
+
+				@media screen and (max-width: 468px) {
+					display: none;
+				}
+
+				p {
+					font-size: 0.7em;
+					text-transform: uppercase;
+					margin-right: 20px;
+					margin-bottom: 0px;
+				}
+
+				.hero-description__scroll-line {
+					width: 50%;
+					height: 2px;
+					background-color: $font-color;
+				}
+			}
+
+		}
+	}
+}
