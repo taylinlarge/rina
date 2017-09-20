@@ -3936,11 +3936,13 @@ html, body {
       padding-top: 5px;
       font-weight: bold; }
   .video-header .rina-title-top {
-    transform: translate(-50%, 0%); }
+    transform: translate(-50%, 0%);
+    position: fixed; }
   .video-header .hero-description {
     display: none;
     width: 50%;
-    height: 100%; }
+    height: 100%;
+    opacity: 0; }
     @media screen and (max-width: 468px) {
       .video-header .hero-description {
         width: 100%;
@@ -3955,6 +3957,7 @@ html, body {
           margin-left: 0;
           padding: 30px; } }
       .video-header .hero-description .hero-description__container .hero-description__underline {
+        position: relative;
         height: 5px;
         width: 60px;
         background-color: #DDD1B9;
@@ -3963,6 +3966,7 @@ html, body {
           .video-header .hero-description .hero-description__container .hero-description__underline {
             display: none; } }
       .video-header .hero-description .hero-description__container h1 {
+        position: relative;
         font-size: 2em;
         margin-bottom: 0;
         font-family: "Cormorant Garamond"; }
@@ -3976,6 +3980,7 @@ html, body {
           font-style: italic;
           color: #01293D; }
       .video-header .hero-description .hero-description__container p {
+        position: relative;
         max-width: 600px;
         margin-left: 10%;
         font-family: "Cormorant Garamond";
@@ -4022,6 +4027,8 @@ nav {
       font-family: "democratica";
       padding: 0 25px;
       list-style: none; }
+      nav ul li a {
+        color: #01293D; }
       nav ul li a:active, nav ul li a:visited {
         color: #01293D; }
     nav ul .rina-nav-title {
@@ -4042,6 +4049,9 @@ nav {
     align-items: center;
     padding: 60px 0;
     z-index: 1000; }
+    @media screen and (max-width: 768px) {
+      .search-wrapper .search-letters-menu {
+        padding: 30px 0; } }
     .search-wrapper .search-letters-menu .search-letter {
       font-family: "democratica";
       font-size: 1.1em;
@@ -4079,7 +4089,7 @@ nav {
     bottom: -94%;
     left: 7%;
     justify-content: space-around; }
-    @media screen and (max-width: 468px) {
+    @media screen and (max-width: 768px) {
       .search-wrapper .init-search-area .search-bot-divider {
         display: none; } }
     .search-wrapper .init-search-area .search-bot-divider .search-bot-divider__left {
@@ -4107,9 +4117,17 @@ nav {
       top: 50%;
       left: 50%;
       transform: translate(-105.4%, -50%); }
+      @media screen and (max-width: 768px) {
+        .search-wrapper .pique-page .brown-box {
+          width: 70%;
+          padding: 0 30px;
+          transform: translate(-50%, 30%); } }
       .search-wrapper .pique-page .brown-box .position-image {
         width: 100%;
         margin-left: 40px; }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .pique-page .brown-box .position-image {
+            margin-left: 0px; } }
         .search-wrapper .pique-page .brown-box .position-image img {
           position: relative;
           width: 100%;
@@ -4121,6 +4139,10 @@ nav {
       left: 50%;
       transform: translate(27%, -125%);
       z-index: 100; }
+      @media screen and (max-width: 768px) {
+        .search-wrapper .pique-page .position-logo {
+          width: 53%;
+          transform: translate(-50%, -455%); } }
       .search-wrapper .pique-page .position-logo img {
         width: 100%; }
     .search-wrapper .pique-page .position-description {
@@ -4129,12 +4151,24 @@ nav {
       top: 50%;
       left: 50%;
       transform: translate(70%, -50%); }
+      @media screen and (max-width: 768px) {
+        .search-wrapper .pique-page .position-description {
+          transform: translate(-50%, -150%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; } }
       .search-wrapper .pique-page .position-description h1 {
+        position: relative;
         display: inline-block;
         font-size: 2em;
         margin-right: 106px;
         margin-bottom: 0;
         font-family: "Cormorant Garamond"; }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .pique-page .position-description h1 {
+            font-size: 1.5em;
+            margin-right: 0px; } }
         .search-wrapper .pique-page .position-description h1 .pique-bold {
           font-weight: bold;
           color: #01293D; }
@@ -4143,14 +4177,30 @@ nav {
           color: #01293D; }
       .search-wrapper .pique-page .position-description .button-container {
         display: inline-block; }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .pique-page .position-description .button-container {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;
+            transform: translate(1050%, 200%); } }
         .search-wrapper .pique-page .position-description .button-container .fa-check {
           padding: 0 40px; }
+          @media screen and (max-width: 768px) {
+            .search-wrapper .pique-page .position-description .button-container .fa-check {
+              padding: 40px 0px; } }
       .search-wrapper .pique-page .position-description .pink-underline {
         height: 2px;
         width: 60px;
-        background-color: #DDD1B9;
+        background-color: #F6CFBE;
         margin: 20px 0; }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .pique-page .position-description .pink-underline {
+            margin-top: 10px;
+            margin-bottom: 50px; } }
       .search-wrapper .pique-page .position-description p {
+        position: relative;
         max-width: 600px;
         margin-left: 10%;
         font-family: "Cormorant Garamond";
@@ -4163,7 +4213,7 @@ nav {
       bottom: -94%;
       left: 7%;
       justify-content: space-around; }
-      @media screen and (max-width: 468px) {
+      @media screen and (max-width: 768px) {
         .search-wrapper .pique-page .pique-bot-divider {
           display: none; } }
       .search-wrapper .pique-page .pique-bot-divider .search-bot-divider__left {
@@ -4190,6 +4240,11 @@ nav {
       padding: 30px 0;
       transform: translate(0%, -50%);
       background-color: #F6CFBE; }
+      @media screen and (max-width: 768px) {
+        .search-wrapper .scorpion-page .pink-box {
+          width: 70%;
+          padding: 0 30px;
+          transform: translate(-50%, 90%); } }
       .search-wrapper .scorpion-page .pink-box .right-position-logo-top {
         position: absolute;
         z-index: 2;
@@ -4197,6 +4252,10 @@ nav {
         top: 50%;
         left: 50%;
         transform: translate(-97%, -182%); }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .scorpion-page .pink-box .right-position-logo-top {
+            width: 63%;
+            transform: translate(-50%, -1295%); } }
         .search-wrapper .scorpion-page .pink-box .right-position-logo-top img {
           width: 100%; }
       .search-wrapper .scorpion-page .pink-box .right-position-logo-bottom {
@@ -4205,6 +4264,9 @@ nav {
         left: 50%;
         transform: translate(-30%, 110%);
         width: 100%; }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .scorpion-page .pink-box .right-position-logo-bottom {
+            display: none; } }
         .search-wrapper .scorpion-page .pink-box .right-position-logo-bottom img {
           width: 100%; }
       .search-wrapper .scorpion-page .pink-box .right-position-image {
@@ -4213,6 +4275,9 @@ nav {
         top: 50%;
         left: 50%;
         transform: translate(-50%, 0%); }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .scorpion-page .pink-box .right-position-image {
+            margin-left: 0px; } }
         .search-wrapper .scorpion-page .pink-box .right-position-image img {
           position: relative;
           width: 100%; }
@@ -4222,6 +4287,13 @@ nav {
       top: 50%;
       left: 50%;
       transform: translate(-164%, -50%); }
+      @media screen and (max-width: 768px) {
+        .search-wrapper .scorpion-page .left-position-description {
+          transform: translate(-50%, -150%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; } }
       .search-wrapper .scorpion-page .left-position-description .title-button-container {
         display: flex;
         justify-content: space-between;
@@ -4237,6 +4309,10 @@ nav {
           margin-bottom: 0;
           font-family: "Cormorant Garamond";
           order: 2; }
+          @media screen and (max-width: 768px) {
+            .search-wrapper .scorpion-page .left-position-description .title-button-container h1 {
+              font-size: 1.5em;
+              margin-right: 0px; } }
           @media screen and (max-width: 980px) {
             .search-wrapper .scorpion-page .left-position-description .title-button-container h1 {
               order: 1; } }
@@ -4251,6 +4327,14 @@ nav {
           justify-content: center;
           align-items: center;
           order: 1; }
+          @media screen and (max-width: 768px) {
+            .search-wrapper .scorpion-page .left-position-description .title-button-container .left-button-container {
+              display: flex;
+              position: absolute;
+              flex-direction: column;
+              top: 50%;
+              left: 50%;
+              transform: translate(1050%, 200%); } }
           @media screen and (max-width: 980px) {
             .search-wrapper .scorpion-page .left-position-description .title-button-container .left-button-container {
               order: 2; } }
@@ -4262,6 +4346,11 @@ nav {
         background-color: #F6CFBE;
         margin: 20px 0;
         margin-left: 80%; }
+        @media screen and (max-width: 768px) {
+          .search-wrapper .scorpion-page .left-position-description .left-pink-underline {
+            margin-top: 10px;
+            margin-bottom: 50px;
+            margin-left: 0px; } }
       .search-wrapper .scorpion-page .left-position-description p {
         max-width: 600px;
         margin-right: 10%;
@@ -4275,7 +4364,7 @@ nav {
       bottom: -94%;
       left: 7%;
       justify-content: space-around; }
-      @media screen and (max-width: 468px) {
+      @media screen and (max-width: 768px) {
         .search-wrapper .scorpion-page .scorpion-bot-divider {
           display: none; } }
       .search-wrapper .scorpion-page .scorpion-bot-divider .search-bot-divider__left {

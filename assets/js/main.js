@@ -14,6 +14,7 @@ function loadPage(){
 
 setTimeout(loadPage, 2000);
 
+
 // video
  // onComplete: function(){
 	// 	$('.video-container video').css("width", "auto"
@@ -25,13 +26,17 @@ function heroVideoAnimation(){
 	} else {
 		videoTL.to('.video-container', 1, {left: "50%"});
 	}
-	videoTL.to('.rina-title', 1, {css:{position: "absolute", top: "0%", color: "black"}});
+	videoTL.to('.rina-title', 1, {css:{position: "fixed", top: "0%", color: "black"}});
 	if (window.innerWidth > 414) {
 		videoTL.to('.rina-title h1', 1, {fontSize:"1.4rem"}, "-=1");
 	}
 	videoTL.to('nav', 0.5, {height: "50px", opacity: 1, zIndex: "100"});
 	$('.rina-title').addClass('rina-title-top');
-	videoTL.to('.hero-description', 1, {display: "flex"});
+	videoTL.to('.hero-description', 1, {display: "flex", opacity: "1"});
+	videoTL.from('.hero-description__container h1', 0.5, {right: "100px", opacity: "0"});
+	videoTL.from('hero-description__underline', 0.5, {right: "100px", opacity: "0"}, "+=0.6");
+	videoTL.from('.hero-description__text', 0.5, {top: "-100px", opacity: "0"}, "-=0.5");
+	videoTL.from('.hero-description__scroll', 0.5, {bottom: "35%", opacity: '0'});
 	videoTL.to('.search-wrapper', 0.5, {display: "block"});
 }
 
@@ -41,10 +46,14 @@ $('form').on('submit', function(e) {
 	e.preventDefault();
 });
 
-$('.p').on('click', function(e) {
+$('.p').on('click', function() {
 	if( $('.init-search-area').hasClass('active') ) {
 		TweenMax.to('.init-search-area', 0.5, {opacity: "0", display: "none", onComplete: function(){
 			$('.init-search-area').removeClass('active');
+			// var piqueTL = new TimelineMax();
+			// piqueTL.fromTo('.position-image img', 0.7, {right: "20%", opacity: "0"},{right: "0px", opacity: '1'});
+			// piqueTL.from('.position-description h1', 0.7, {top: "-50px", opacity: 0});
+			// piqueTL.from('.position-description p', 0.7, {top: "-50px", opacity: 0});
 		}});
 		TweenMax.to('.pique-page', 0.5, {display: "block", opacity: "1", onComplete: function(){
 			$('.pique-page').addClass('active');
@@ -70,7 +79,7 @@ $('.p').on('click', function(e) {
 	}
 });
 
-$('.s').on('click', function(e){
+$('.s').on('click', function(){
 	if( $('.init-search-area').hasClass('active') ) {
 		TweenMax.to('.init-search-area', 0.5, {opacity: "0", display: "none", onComplete: function(){
 			$('.init-search-area').removeClass('active');

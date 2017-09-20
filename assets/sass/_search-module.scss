@@ -14,7 +14,7 @@
 	    padding: 60px 0;
 	    z-index: 1000;
 
-	    @media screen and (max-width: 468px) {
+	    @media screen and (max-width: $iPhone6-bp) {
 			padding: 30px 0;
 		}
 
@@ -72,7 +72,7 @@
 		    left: 7%;
 		    justify-content: space-around;
 
-		    @media screen and (max-width: 468px) {
+		    @media screen and (max-width: $iPhone6-bp) {
 					display: none;
 			}
 
@@ -111,9 +111,19 @@
 		    left: 50%;
 		    transform: translate(-105.4%,-50%);
 
+		    @media screen and (max-width: $iPhone6-bp) {
+		    	width: 70%;
+			    padding: 0 30px;
+			    transform: translate(-50%, 30%);
+		    }
+
 			.position-image {
 				width: 100%;
 				margin-left: 40px;
+
+				@media screen and (max-width: $iPhone6-bp) {
+					margin-left: 0px;
+				}
 
 			    img {
 			    	position: relative;
@@ -131,6 +141,11 @@
 		    left: 50%;
 		    transform: translate(27%,-125%);
 		    z-index: 100;
+			
+			@media screen and (max-width: $iPhone6-bp) {
+				width: 53%;
+				transform: translate(-50%, -455%);
+			}
 
 		    img {
 		    	width: 100%;
@@ -144,15 +159,26 @@
 		    left: 50%;
 		    transform: translate(70%, -50%);
 
-
+			@media screen and (max-width: $iPhone6-bp) {
+			    transform: translate(-50%, -150%);
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    justify-content: center;
+			}
 
 		    h1 {
+		    	position: relative;
 		    	display: inline-block;
 				font-size: 2em;
 				margin-right: 106px;
 				margin-bottom: 0;
 				font-family: $body-font;
 				
+				@media screen and (max-width: $iPhone6-bp) {
+					font-size: 1.5em;
+					margin-right: 0px;
+				}
 
 				.pique-bold {
 					font-weight: bold;
@@ -168,20 +194,39 @@
 			.button-container {
 				display: inline-block;
 
+				@media screen and (max-width: $iPhone6-bp){
+					display: flex;
+					position: absolute;
+				    flex-direction: column;
+				    top: 50%;
+				    left: 50%;
+				    transform: translate(1050%, 200%);
+				}
+
 				.fa-check {
 					padding: 0 40px;
+
+					@media screen and (max-width: $iPhone6-bp) {
+						padding: 40px 0px;
+					}
 				}
 			}
 
 			 .pink-underline {
 				height: 2px;
 				width: 60px;
-				background-color: #DDD1B9;
+				background-color: #F6CFBE;
 				margin: 20px 0;
+
+				@media screen and (max-width: $iPhone6-bp) {
+					margin-top: 10px;
+					margin-bottom: 50px;
+				}
 				
 			}
 			
 			p {
+				position: relative;
 				max-width: 600px;
 				margin-left: 10%;
 				font-family: $body-font;
@@ -198,7 +243,7 @@
 		    left: 7%;
 		    justify-content: space-around;
 
-		    @media screen and (max-width: 468px) {
+		    @media screen and (max-width: $iPhone6-bp) {
 					display: none;
 			}
 
@@ -236,6 +281,12 @@
 		    transform: translate(0%,-50%);
 			background-color: #F6CFBE;
 
+			@media screen and (max-width: $iPhone6-bp) {
+		    	width: 70%;
+			    padding: 0 30px;
+			    transform: translate(-50%, 90%);
+		    }
+
 			.right-position-logo-top {
 				position: absolute;
 			    z-index: 2;
@@ -243,6 +294,11 @@
 			    top: 50%;
 			    left: 50%;
 			    transform: translate(-97%,-182%);
+
+			    @media screen and (max-width: $iPhone6-bp) {
+				    width: 63%;
+				    transform: translate(-50%, -1295%);
+				}
 
 				img {
 					width: 100%;
@@ -256,6 +312,10 @@
 			    transform: translate(-30%,110%);
 			    width: 100%;
 
+			    @media screen and (max-width: $iPhone6-bp) {
+			    	display: none;
+			    }
+
 				img {
 					width: 100%;
 				}
@@ -267,6 +327,10 @@
 			    top: 50%;
 			    left: 50%;
 			    transform: translate(-50%, 0%);
+
+			    @media screen and (max-width: $iPhone6-bp) {
+					margin-left: 0px;
+				}
 
 				img {
 					position: relative;
@@ -282,13 +346,21 @@
 		    left: 50%;
 		    transform: translate(-164%, -50%);
 
+		    @media screen and (max-width: $iPhone6-bp) {
+			    transform: translate(-50%, -150%);
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    justify-content: center;
+			}
+
 			.title-button-container {
 				display: flex;
 				justify-content: space-between;
 				width: 80%;
 				margin-left: 80px;
 
-				@media screen and (max-width: 980px) {
+				@media screen and (max-width: $lg-tablet) {
 					flex-direction: column;
 					margin-left: 0;	
 				}
@@ -300,7 +372,12 @@
 					font-family: $body-font;
 					order: 2;
 
-					@media screen and (max-width: 980px) {
+					@media screen and (max-width: $iPhone6-bp) {
+						font-size: 1.5em;
+						margin-right: 0px;
+					}
+
+					@media screen and (max-width: $lg-tablet) {
 						order: 1;
 					}
 					
@@ -322,7 +399,16 @@
 					align-items: center;
 					order: 1;
 
-					@media screen and (max-width: 980px) {
+					@media screen and (max-width: $iPhone6-bp){
+						display: flex;
+						position: absolute;
+					    flex-direction: column;
+					    top: 50%;
+					    left: 50%;
+					    transform: translate(1050%, 200%);
+					}
+
+					@media screen and (max-width: $lg-tablet) {
 						order: 2;
 					}
 
@@ -338,6 +424,12 @@
 				background-color: #F6CFBE;
 				margin: 20px 0;
 				margin-left: 80%;
+
+				@media screen and (max-width: $iPhone6-bp) {
+					margin-top: 10px;
+					margin-bottom: 50px;
+					margin-left: 0px;
+				}
 				
 			}
 			
@@ -359,7 +451,7 @@
 		    left: 7%;
 		    justify-content: space-around;
 
-		    @media screen and (max-width: 468px) {
+		    @media screen and (max-width: 768px) {
 					display: none;
 			}
 

@@ -22,6 +22,10 @@ nav {
 			padding: 0 25px;
 			list-style: none;
 
+			a {
+				color: $font-color;
+			}
+
 			a:active, a:visited {
 				color: $font-color;
 			}
