@@ -1,7 +1,7 @@
 {
-  "name": "circus-starter",
+  "name": "rina",
   "version": "1.1.0",
-  "description": "A good starting point for new Circus students",
+  "description": "Website for beginner dancers to see and learn new moves.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrissilich/circus-starter.git"
+    "url": "git+https://github.com/taylinlarge/rina"
   },
-  "author": "Chris Silich",
-  "license": "MIT",
+  "author": "Taylin Large",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/chrissilich/circus-starter/issues"
+    "url": "https://github.com/taylinlarge"
   },
-  "homepage": "https://github.com/chrissilich/circus-starter#readme"
+  "homepage": "https://github.com/taylinlarge"
 }
